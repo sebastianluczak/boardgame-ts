@@ -1,0 +1,19 @@
+= TypeScript initial template
+
+This is personal template to kickstart projects quickly in TS.
+
+== Setup
+
+[code]
+====
+git clone
+npm install
+npm start
+====
+
+Source code is located in ``./src``, build is done in ``./dist``.
+
+== ``npm start`` magic
+
+This command starts node in watch mode, so you can write TypeScript code
+while watching resulting build of JavaScript code in console.
