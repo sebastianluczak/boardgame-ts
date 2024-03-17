@@ -1,6 +1,34 @@
-= TypeScript initial template
+= TypeScript Battleships
 
-This is personal template to kickstart projects quickly in TS.
+Simple game done in TS as part of personal training.
+
+image::screenshot.png[]
+
+== Why another Battleship clone?
+
+I've started it with two things in mind:
+
+* I want to be better at TypeScript,
+* I want to create CLI game,
+* I want board game where board is not represented as an array.
+
+It's common to create games like this with arrays. i.e. Tic-Tac-Toe when board
+representation is similar to this:
+
+[code]
+----
+array: [
+    X | O | X
+    O | X | O
+    O | O | O
+]
+----
+
+In this game, board is an object storing game elements as another objects.
+
+Drawing of board is performed by checking each position for ``Target`` and it's state in memory.
+
+Feel free to explore code.
 
 == Setup
 
@@ -8,12 +36,9 @@ This is personal template to kickstart projects quickly in TS.
 ====
 git clone
 npm install
+npm test
 npm start
 ====
 
 Source code is located in ``./src``, build is done in ``./dist``.
 
-== ``npm start`` magic
-
-This command starts node in watch mode, so you can write TypeScript code
-while watching resulting build of JavaScript code in console.
