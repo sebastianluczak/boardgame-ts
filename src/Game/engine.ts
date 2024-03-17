@@ -16,7 +16,7 @@ export class Engine {
 		});
 	}
 
-	public start(): void {
+	public nextTurn(): void {
 		this.board.draw();
 		this.nextMove();
 	}
@@ -26,18 +26,19 @@ export class Engine {
 		this.inputOutput.question('Your move? \r\n', move => {
 			const moveRepresentation = move.split(':');
 			const row = parseInt(moveRepresentation[1], 10) - 1;
-			const column = new PositionMap().mapLetterToColumnNumber(moveRepresentation[0]);
+			const column = new PositionMap().mapLetterToColumnNumber(moveRepresentation[0].toString().toUpperCase());
 			if (moveRepresentation.length === 2) {
 				this.shot = {
 					position: {x: row, y: column},
 				} satisfies Shot;
+				console.clear();
 				this.resolveShot();
 			} else {
+				console.clear();
 				console.error('Not valid move!');
 			}
 
-			this.board.draw();
-			this.nextMove();
+			this.nextTurn();
 		});
 	}
 

@@ -39,9 +39,9 @@ export class Board {
 					if (validTarget.hasDamagedSection(currentDrawPosition)) {
 						process.stdout.write('🔴');
 					} else {
-						// Uncomment this section to debug the board
-						process.stdout.write('🟢');
-						// Process.stdout.write('🔵');
+						// Uncomment this section to debug the board.
+						// process.stdout.write('🟢');
+						process.stdout.write('🔵');
 					}
 				} else {
 					process.stdout.write('🔵');

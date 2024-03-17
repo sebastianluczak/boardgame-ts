@@ -6,12 +6,10 @@
   "scripts": {
     "clean": "rimraf dist",
     "start": "npm-run-all --parallel watch:build watch:server --print-label",
+    "build": "tsc",
     "watch:build": "tsc --watch",
     "watch:server": "nodemon './dist/index.js' --watch './dist'",
     "test": "npx eslint src"
-  },
-  "bin": {
-    "battleships-ts": "node dist/index.js"
   },
   "author": "",
   "license": "ISC",
