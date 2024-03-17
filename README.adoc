@@ -6,7 +6,7 @@ image::screenshot.png[]
 
 == Why another Battleship clone?
 
-I've started it with two things in mind:
+I've started it with three things in mind:
 
 * I want to be better at TypeScript,
 * I want to create CLI game and fiddle with standard input/standard output,
