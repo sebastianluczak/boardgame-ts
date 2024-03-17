@@ -30,20 +30,15 @@ Drawing of board is performed by checking each position for ``Target`` and it's 
 
 Feel free to explore code.
 
-== Setup
+== Setup and Play
 
 [code]
 ----
 git clone https://github.com/sebastianluczak/boardgame-ts.git
 cd boardgame-ts
 npm install
-npm test
-npm start
+npm run compile
 ----
-
-====
-Source code is located in ``./src``, build is done in ``./dist``.
-====
 
 == How to play
 
@@ -56,3 +51,14 @@ Press ``directional keys`` to move the cursor around table.
 ====
 Press ``Space key`` to shoot.
 ====
+
+== Development
+
+You can run ``npm start`` to compile project on-the fly.
+
+====
+Source code is located in ``./src``, build is done in ``./dist``.
+====
+
+Running ``npm run compile`` in one terminal windows and ``npm start`` in another 
+is convinient way to write code and debug at the same time.
