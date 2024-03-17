@@ -9,7 +9,7 @@ image::screenshot.png[]
 I've started it with two things in mind:
 
 * I want to be better at TypeScript,
-* I want to create CLI game,
+* I want to create CLI game and fiddle with standard input/standard output,
 * I want board game where **board is not represented as an array.**
 
 It's common to create games like this with arrays. i.e. Tic-Tac-Toe when board
@@ -43,4 +43,16 @@ npm start
 
 ====
 Source code is located in ``./src``, build is done in ``./dist``.
+====
+
+== How to play
+
+There is a limit of 100 rounds.
+
+====
+Press ``directional keys`` to move the cursor around table.
+====
+
+====
+Press ``Space key`` to shoot.
 ====

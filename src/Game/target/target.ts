@@ -1,4 +1,4 @@
-import {type Position, TargetOrientation} from '../../Support/types';
+import {type Position, TargetOrientation} from '../../support/types';
 
 export class Target {
 	public destroyed: boolean;
@@ -62,10 +62,12 @@ export class Target {
 	}
 
 	public damageSection(position: Position): void {
-		console.debug(`Destroying section ${position.x}:${position.y} on ${this.name} with size ${this.size} and orientation: ${this.orientation.toString()}`);
+		if (this.damagedSections.find(element => element.y === position.y && element.x === position.x)) {
+			throw new Error(`Section of ${this.name} is already destroyed. Shot wasted...`);
+		}
+
 		this.damagedSections.push(position);
 		if (this.damagedSections.length === this.size) {
-			console.debug('SHIP COMPLETELY DESTROYED!');
 			this.destroyed = true;
 		}
 	}

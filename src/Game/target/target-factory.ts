@@ -1,5 +1,5 @@
 import {Target} from './target';
-import {type Position, TargetOrientation} from '../../Support/types';
+import {type Position, TargetOrientation} from '../../support/types';
 import {randomInt} from 'node:crypto';
 
 export class TargetFactory {
